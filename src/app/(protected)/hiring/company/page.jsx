@@ -10,7 +10,6 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { GoClock } from "react-icons/go";
 import { GiMoneyStack } from "react-icons/gi";
 import moment from "moment";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 function Company() {
@@ -229,7 +228,7 @@ function Company() {
                   </p>
                   <p className="text-gray-600">{company?.size}</p>
                   <p className="text-gray-600 font-semibold mt-3">Website</p>
-                  <Link className="text-blue-700">{company?.website}</Link>
+                  <p className="text-blue-700">{company?.website}</p>
                 </div>
               )}
 

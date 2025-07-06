@@ -138,7 +138,7 @@ export default function Header() {
     { label: "Network", href: "/network/followers", icon: "ri-team-line" },
     { label: "Career", href: "/job", icon: "ri-briefcase-line" },
     { label: "Message", href: "/chat", icon: "ri-chat-3-line" },
-    { label: "Application", href: "/hiring", icon: "ri-briefcase-4-line" },
+    { label: "Application", href: "/notice", icon: "ri-briefcase-4-line" },
     { label: "Profile", href: "/profile", icon: "ri-account-circle-line" },
   ];
 
@@ -170,7 +170,7 @@ export default function Header() {
       <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50 px-4 py-[10px] lg:px-8">
         <div className="flex justify-between items-center min-h-[52px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-4">
             <Image
               src="/assets/logo.png"
               alt="Logo"
@@ -178,6 +178,13 @@ export default function Header() {
               height={40}
               className="object-contain"
             />
+            <div className="hidden md:block">
+            <input
+              type="search"
+              placeholder="Search here"
+              className="w-64 lg:w-96 px-3 py-2 border border-gray-200 rounded-md bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
           </Link>
 
           {/* Desktop Nav */}
