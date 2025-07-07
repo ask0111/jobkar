@@ -218,18 +218,18 @@ function UserControlCard() {
     <>
       <div className="bg-white rounded-lg shadow-md p-6 flex flex-col gap-3">
         {options.map((option, index) => (
-          <Link
-            key={index}
-            href={option.link || "#"}
-            // onClick={
-            //   option.action || (() => (window.location.href = option.link))
-            // }
-            className="flex items-center gap-3 p-3 rounded-md hover:bg-gray-100 transition cursor-pointer"
-          >
-            <span className="text-gray-600 text-lg">{option.icon}</span>
-            <p className="text-sm text-gray-700 font-semibold">
-              {option.label}
-            </p>
+          <Link key={index} href={option.link || "#"}>
+            <div
+              onClick={() => {
+                if (option?.action) option.action();
+              }}
+              className="flex items-center gap-3 p-3 rounded-md hover:bg-gray-100 transition cursor-pointer"
+            >
+              <span className="text-gray-600 text-lg">{option.icon}</span>
+              <p className="text-sm text-gray-700 font-semibold">
+                {option.label}
+              </p>
+            </div>
           </Link>
         ))}
       </div>
